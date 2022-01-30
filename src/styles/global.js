@@ -7,13 +7,17 @@ export default createGlobalStyle`
         --thirdColor: #CED3DC;
         --fourthColor: #822E81;
         --fontMainColor: #141414;
-        --standardValue: 1.2em;
+        --patternFont: 1.4em;
+        --patternBorderRadius: 1em;
+        --patternPadding: 2em;
+        --patternGaps: 2em;
         --shadow: .5em .5em .5em rgba(0, 0, 0, .5);
     }
 
     *{
         margin: 0;
         padding: 0;
+        outline: 0;
         box-sizing: border-box;
     }
 
@@ -29,15 +33,20 @@ export default createGlobalStyle`
         list-style: none;
     }
 
-    h1{
-        text-transform: uppercase;
-    }
-
     body{
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
-        min-height: 100vh;
         color: var(--fontMainColor);
         background-color: var(--thirdColor);
+    }
+
+    @media(max-width: 600px){
+        input{
+            font-size: calc(var(--patternFont) - .5em);
+        }
+
+        a{
+            font-size: calc(var(--patternFont) + .1em);
+        }
     }
 `;
