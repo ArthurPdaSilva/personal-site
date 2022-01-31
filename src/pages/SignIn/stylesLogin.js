@@ -2,10 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
-
 `;
 
 export const ContainerSession = styled.div`
@@ -18,6 +16,7 @@ export const ContainerSession = styled.div`
     background-color: white;
     align-items: center;
     justify-content: center;
+    margin: auto;
 
     a{
         color: var(--secondColor);
@@ -64,5 +63,4 @@ export const ButtonSession = styled.button`
     border-radius: calc(var(--patternBorderRadius) - .5em);
     padding: .5em;
     font-size: var(--patternFont);
-
 `;
