@@ -11,14 +11,27 @@ import PublicRouter from './PublicRouter';
 export default function Rotas(){
     return(
         <Routes>
-            <Route element={<PrivateRouter/>}>
-                <Route path="/home" element={<Home/>}/>
-                <Route path="/contato" element={<Contato/>}/>
-            </Route>
-            <Route element={<PublicRouter/>}>
-                <Route path="/" element={<SignIn/>}/>
-                <Route path="/register" element={<SignUp/>}/>
-            </Route>
+            <Route path="/home" element={
+                <PrivateRouter>
+                    <Home/>
+                </PrivateRouter>
+            }/>
+            <Route path="/contato" element={
+                <PrivateRouter>
+                    <Contato/>
+                </PrivateRouter>
+            }/>
+            <Route path="/" element={
+                <PublicRouter>
+                    <SignIn/>
+                </PublicRouter>
+            }/>
+            <Route path="/register" element={
+                    <PublicRouter>
+                        <SignUp/>
+                    </PublicRouter>
+                }/>
+                
         </Routes>
     )
 }

@@ -13,7 +13,6 @@ export default function AuthProvider({ children }){
     useEffect(() => {
         function loadingUser(){
             const isUser = localStorage.getItem('user-p');
-
             if(isUser){
                 setUser(JSON.parse(isUser));
             }
