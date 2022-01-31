@@ -32,6 +32,13 @@ export default createGlobalStyle`
     li{
         list-style: none;
     }
+    
+    textarea{
+        font-size: 1em;
+        resize: none;
+        padding: var(--patternPadding);
+        border: 1px solid black;
+    }
 
     body{
         font-family: 'Roboto', sans-serif;
