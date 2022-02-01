@@ -3,9 +3,11 @@ import styled from 'styled-components';
 export const ContainerContato = styled.main`
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     margin-bottom: 3em;
     min-height: 100vh;
+
 `;
 
 export const Area = styled.section`
@@ -19,6 +21,12 @@ export const Area = styled.section`
 
     input{
         font-size: 1em;
+    }
+
+    @media(max-width: 600px){
+        width: 100%;
+        height: 100%;
+        box-shadow: 0;
     }
 `;
 
@@ -38,6 +46,10 @@ export const Carrosel = styled.div`
         border: none;
         background-color: transparent;
         margin: 1em;
+    }
+
+    @media(max-width: 600px){
+        display: none;
     }
 `;
 

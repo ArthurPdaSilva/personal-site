@@ -75,7 +75,7 @@ export const ArticleContainer = styled.section`
         font-weight: bold;
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 600px){
         width: 85vw;
         p{
             font-size: 2em;

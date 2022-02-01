@@ -4,6 +4,7 @@ import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import Home from '../pages/Home';
 import Contato from '../pages/Contato';
+import Error from '../pages/Error';
 
 import PrivateRouter from './PrivateRouter';
 import PublicRouter from './PublicRouter';
@@ -30,8 +31,8 @@ export default function Rotas(){
                     <PublicRouter>
                         <SignUp/>
                     </PublicRouter>
-                }/>
-                
+            }/>
+            <Route path="*" element={<Error/>}/>   
         </Routes>
     )
 }
